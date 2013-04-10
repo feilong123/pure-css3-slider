@@ -1,0 +1,100 @@
+/*common*/
+body{
+	background: #ddd;
+	overflow-x:hidden;
+}
+#bd{
+	width: 960px;
+	margin: 100px auto;
+	max-width: 960px;
+}
+
+/*module silder*/
+#sliders{
+	border-radius: 5px;
+	box-shadow: 1px 1px 4px #666;
+	padding: 1%;
+	background: #fff;
+}
+#overflow{
+	widows: 100%;
+	overflow: hidden;
+}
+#sliders .inner{
+	width: 500%;
+	transition:all 1s linear;
+	-webkit-transition:all 1s linear;
+}
+#sliders article{
+	float: left;
+	width: 20%;
+}
+#silders article .info{
+	position: absolute;
+	opacity: 0;
+	padding: 30px;
+	color: #666;
+	font-family: Arial;
+	transition:opacity 0.1s ease-out;
+	-webkit-transform:translateZ(0);
+	-webkit-transition:opacity 0.1s ease-out;
+} 
+#sliders article .info h1{
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 0 5px;
+}
+#sliders article .info a {
+	color: #666;
+	text-decoration: none;
+}
+
+/*module controls */
+#controls {
+	width: 100%;
+	height: 50px;
+	margin-top: -25%;
+}
+#controls label{
+	display: none;
+	widows: 50px;
+	height:50px;
+	opacity: 0.3;
+	cursor: pointer;
+}
+#controls label:hover{
+	opacity: 1;
+}
+
+/*module active*/
+#active{
+	widows: 100%;
+	margin-top: 23%;
+	text-align: center;
+}
+#active label{
+	display: inline-block;
+	widows: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background: #bbb;
+	border-color: #777;	
+}
+#active label:hover{
+	background: #ccc
+}
+#slider1:checked ~ #sliders .inner {
+    margin-left: 0;
+}
+#slider2:checked ~ #sliders .inner {
+    margin-left: -100%;
+}
+#slider3:checked ~ #sliders .inner {
+    margin-left: -200%;
+}
+#slider4:checked ~ #sliders .inner {
+    margin-left: -300%;
+}
+#slider5:checked ~ #sliders .inner {
+    margin-left: -400%;
+}
